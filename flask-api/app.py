@@ -10,7 +10,7 @@ app.config['JSON_SORT_KEYS'] = False
 CORS(app)
 
 def realtime_simulation():
-    df = pd.read_excel('Bank_Personal_Loan_Modelling.xlsx','Data')
+    df = pd.read_excel('Bank_Personal_Loan_Modelling.xlx','Data')
     df.pop('Personal Loan')
     df.columns = ["ID","Age","Experience","Income","ZIPCode","Family","CCAvg","Education","Mortgage","SecuritiesAccount","CDAccount","Online","CreditCard"]
     df = df.sample()
