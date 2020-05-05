@@ -10,7 +10,7 @@ app.config['JSON_SORT_KEYS'] = False
 CORS(app)
 
 def realtime_simulation():
-    df = pd.read_excel('streaming_sample.csv','Data')
+    df = pd.read_excel('streaming_sample.xlsx','streaming_sample')
     df.pop('Vehicle Present')
     df.columns = ["O_BetweenStreet1", "O_BetweenStreet2", "DewPointC", "DurationSeconds", "FeelsLikeC", "Hourly_Counts", "Sensor_Id", "Sensor_Name", "Side Of Street", "StreetId", "StreetName", "Time", "WindChillC", "WindGustKmph", "cloudcover", "humidity", "moon_illumination", "pressure", "tempC", "winddirDegree", "windspeedKmph"]
     df = df.sample()
